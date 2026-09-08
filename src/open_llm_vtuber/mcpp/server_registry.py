@@ -3,6 +3,7 @@
 import shutil
 import json
 
+from datetime import timedelta
 from pathlib import Path
 from typing import Dict, Optional, Union, Any
 from loguru import logger
@@ -80,13 +81,22 @@ class ServerRegistry:
                     )
                     continue
 
+            # JSON "timeout" is a number of seconds; the MCP SDK requires a
+            # timedelta. Convert here so per-server timeouts actually work.
+            timeout_seconds = server_details.get("timeout")
+            timeout = (
+                timedelta(seconds=timeout_seconds)
+                if timeout_seconds is not None
+                else None
+            )
+
             self.servers[server_name] = MCPServer(
                 name=server_name,
                 command=command,
                 args=server_details["args"],
                 env=server_details.get("env", None),
                 cwd=server_details.get("cwd", None),
-                timeout=server_details.get("timeout", None),
+                timeout=timeout,
             )
             logger.debug(f"MCPSR: Loaded server: '{server_name}'.")
 
