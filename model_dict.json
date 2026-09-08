@@ -26,5 +26,93 @@
                 "": 1
             }
         }
+    },
+    {
+        "name": "Haru",
+        "description": "",
+        "url": "/live2d-models/Haru/Haru.model3.json",
+        "kScale": 0.5,
+        "initialXshift": 0,
+        "initialYshift": 0,
+        "kXOffset": 1150,
+        "idleMotionGroupName": "Idle",
+        "emotionMap": {
+            "neutral": 0,
+            "anger": 2,
+            "disgust": 2,
+            "fear": 1,
+            "joy": 3,
+            "smirk": 3,
+            "sadness": 1,
+            "surprise": 3
+        },
+        "tapMotions": {
+            "HitAreaHead": {
+                "": 1
+            },
+            "HitAreaBody": {
+                "": 1
+            }
+        }
+    },
+    {
+        "name": "LL",
+        "description": "",
+        "url": "/live2d-models/LL/LL.model3.json",
+        "kScale": 0.5,
+        "initialXshift": 0,
+        "initialYshift": 0,
+        "kXOffset": 1150,
+        "idleMotionGroupName": "Idle",
+        "defaultEmotion": "正常",
+        "emotionMap": {
+            "正常": 0,
+            "脸红": 1,
+            "生气": 2,
+            "流泪": 3,
+            "爱心": 4,
+            "星星": 5,
+            "圈圈": 6,
+            "脸黑": 7,
+            "麦克": 8
+        },
+        "tapMotions": {
+            "HitAreaHead": {
+                "": 1
+            },
+            "HitAreaBody": {
+                "": 1
+            }
+        }
+    },
+    {
+        "name": "阿库露_vts",
+        "description": "",
+        "url": "/live2d-models/阿库露_vts/阿库露_vts.model3.json",
+        "kScale": 0.5,
+        "initialXshift": 0,
+        "initialYshift": 0,
+        "kXOffset": 1150,
+        "idleMotionGroupName": "Idle",
+        "defaultEmotion": "正常",
+        "emotionMap": {
+            "正常": 0,
+            "脸红": 1,
+            "害羞脸": 2,
+            "眯眯眼脸": 3,
+            "呆呆脸": 4,
+            "O形嘴": 5,
+            "瞳孔缩小": 6,
+            "脸黑": 7,
+            "挥挥手": 8
+        },
+        "tapMotions": {
+            "HitAreaHead": {
+                "": 1
+            },
+            "HitAreaBody": {
+                "": 1
+            }
+        }
     }
 ]
