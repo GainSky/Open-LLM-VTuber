@@ -2,11 +2,52 @@
     "mcp_servers": {
       "time": {
         "command": "uvx",
-        "args": ["mcp-server-time", "--local-timezone=Asia/Shanghai"]
+        "args": ["mcp-server-time", "--local-timezone=Asia/Shanghai"],
+        "env": {
+          "HTTP_PROXY": "http://192.168.31.1:7890",
+          "HTTPS_PROXY": "http://192.168.31.1:7890",
+          "http_proxy": "http://192.168.31.1:7890",
+          "https_proxy": "http://192.168.31.1:7890",
+          "NO_PROXY": "localhost,127.0.0.1",
+          "no_proxy": "localhost,127.0.0.1"
+        }
       },
       "ddg-search": {
         "command": "uvx",
-        "args": ["duckduckgo-mcp-server"]
+        "args": ["duckduckgo-mcp-server"],
+        "env": {
+          "HTTP_PROXY": "http://192.168.31.1:7890",
+          "HTTPS_PROXY": "http://192.168.31.1:7890",
+          "http_proxy": "http://192.168.31.1:7890",
+          "https_proxy": "http://192.168.31.1:7890",
+          "NO_PROXY": "localhost,127.0.0.1",
+          "no_proxy": "localhost,127.0.0.1"
+        }
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": ["-y", "-p", "@modelcontextprotocol/server-filesystem", "mcp-server-filesystem", "/home/gainsky", "/mnt"],
+        "env": {
+          "HTTP_PROXY": "http://192.168.31.1:7890",
+          "HTTPS_PROXY": "http://192.168.31.1:7890",
+          "http_proxy": "http://192.168.31.1:7890",
+          "https_proxy": "http://192.168.31.1:7890",
+          "NO_PROXY": "localhost,127.0.0.1",
+          "no_proxy": "localhost,127.0.0.1"
+        }
+      },
+      "desktop-commander": {
+        "command": "npx",
+        "args": ["-y", "-p", "@wonderwhy-er/desktop-commander", "desktop-commander"],
+        "timeout": 120,
+        "env": {
+          "HTTP_PROXY": "http://192.168.31.1:7890",
+          "HTTPS_PROXY": "http://192.168.31.1:7890",
+          "http_proxy": "http://192.168.31.1:7890",
+          "https_proxy": "http://192.168.31.1:7890",
+          "NO_PROXY": "localhost,127.0.0.1",
+          "no_proxy": "localhost,127.0.0.1"
+        }
       }
     }
 }
